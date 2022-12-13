@@ -1,13 +1,12 @@
 import {useEffect, useState} from "react";
 import Discussion from "./Components/Discussion";
+import {getDiscussion} from "./DiscussionDataApi";
 
 const Discussions = () => {
   const [discussionData, setDiscussionData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/discussions")
-      .then((res) => res.json())
-      .then((data) => setDiscussionData(data));
+    getDiscussion().then((data) => setDiscussionData(data));
   }, []);
 
   return (
