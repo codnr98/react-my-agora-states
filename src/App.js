@@ -5,9 +5,11 @@ import Discussions from "./Discussions";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Discussions />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path='/' element={<Discussions />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
